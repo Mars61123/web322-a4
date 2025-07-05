@@ -1,0 +1,62 @@
+<!--/*
+********************************************************************************
+*  WEB322 – Assignment 04
+*
+*  I declare that this assignment is my own work in accordance with Seneca's
+*  Academic Integrity Policy:
+*  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+*  Name: Marsela Gjeka    Student ID: 153019237  Date: 07/03/2025
+*
+********************************************************************************/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About</title>
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body class="bg-base-200 text-base-content">
+
+  <%- include('partials/navbar', { page: '/about' }) %>
+
+  <!-- Hero section -->
+  <section class="hero bg-base-100 py-12">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold">About</h1>
+      <p class="mt-4 text-lg opacity-80 prose lg:prose-xl mx-auto">
+        I’m easygoing and love sports and outdoor adventures. I thrive on a busy schedule 
+        and enjoy staying active every day. I’m curious about everything—from philosophy’s 
+        big questions to the latest in computers—and I’m always eager to learn something new. 
+        My diverse interests keep me engaged and growing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main content: flex that centers both items -->
+  <main
+    class="container mx-auto py-12
+           flex flex-col md:flex-row
+           items-center justify-center
+           text-center gap-8"
+  >
+    <!-- Portrait -->
+    <img
+      src="/img/me.jpg"
+      alt="Me"
+      class="rounded-lg w-48 h-48 object-cover"
+    />
+
+    <!-- Bio text -->
+    <div class="prose prose-lg max-w-prose">
+      <p>
+        Hi, I’m Marsela from Albania, an international student here in Canada 
+        for almost two years now. I love web development, climate science, 
+        and working on open-source projects. I’m currently enrolled in WEB322, 
+        where I’m focused on building innovative solutions.
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>

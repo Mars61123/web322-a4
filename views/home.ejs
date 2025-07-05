@@ -1,0 +1,84 @@
+<!--/*
+********************************************************************************
+*  WEB322 – Assignment 04
+*
+*  I declare that this assignment is my own work in accordance with Seneca's
+*  Academic Integrity Policy:
+*  https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+*  Name: Marsela Gjeka    Student ID: 153019237  Date: 07/03/2025
+*
+********************************************************************************/-->
+
+<%- include('partials/navbar', { page: '/' }) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Climate Solutions</title>
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body class="bg-base-200 text-base-content">
+
+  <!-- Hero section -->
+  <section class="hero bg-base-100 py-12">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-bold">Explore Our Projects</h1>
+      <p class="mt-4 text-lg opacity-80 prose lg:prose-xl mx-auto">
+        Discover innovative climate solutions across energy, transport, and industry.
+      </p>
+      <a href="/solutions/projects" class="btn btn-primary btn-lg mt-6">
+        View All Projects
+      </a>
+    </div>
+  </section>
+
+  <!-- Projects grid -->
+  <main class="container mx-auto py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Project One -->
+      <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
+        <figure>
+          <img src="/img/car.jpg" alt="Project One" class="w-full h-48 object-cover rounded-t-lg"/>
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Project One</h2>
+          <p class="prose">Short summary of project one.</p>
+          <div class="card-actions justify-end">
+            <a href="/solutions/projects/1" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two -->
+      <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
+        <figure>
+          <img src="/img/carbon.png" alt="Project Two" class="w-full h-48 object-cover rounded-t-lg"/>
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Project Two</h2>
+          <p class="prose">Short summary of project two.</p>
+          <div class="card-actions justify-end">
+            <a href="/solutions/projects/2" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Three -->
+      <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-200">
+        <figure>
+          <img src="/img/solarfarm.jpg" alt="Project Three" class="w-full h-48 object-cover rounded-t-lg"/>
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Project Three</h2>
+          <p class="prose">Short summary of project three.</p>
+          <div class="card-actions justify-end">
+            <a href="/solutions/projects/3" class="btn btn-outline btn-sm">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

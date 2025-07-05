@@ -1,0 +1,44 @@
+<%- include('partials/navbar', { page: '/solutions/projects' }) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Projects</title>
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body class="bg-base-200 text-base-content">
+
+  <!-- Filter links -->
+  <section class="container mx-auto py-8 text-center">
+    <h1 class="text-4xl font-bold mb-4">Explore Projects</h1>
+    <div class="space-x-2">
+      <a href="/solutions/projects"                 class="btn btn-sm">All</a>
+      <a href="/solutions/projects?sector=energy"    class="btn btn-sm">Energy</a>
+      <a href="/solutions/projects?sector=transport" class="btn btn-sm">Transport</a>
+      <a href="/solutions/projects?sector=industry"  class="btn btn-sm">Industry</a>
+    </div>
+  </section>
+
+  <!-- Projects grid -->
+  <main class="container mx-auto py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <% projects.forEach(p => { %>
+      <div class="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow">
+        <figure>
+          <img src="<%= p.feature_img_url %>" alt="<%= p.title %>" class="w-full h-48 object-cover rounded-t-lg"/>
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title"><%= p.title %></h2>
+          <p><%= p.summary_short %></p>
+          <div class="card-actions justify-end">
+            <a href="/solutions/projects/<%= p.id %>" class="btn btn-outline btn-sm">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<%- include('partials/navbar', { page: '' }) %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title><%= project.title %></title>
+  <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body class="bg-base-200 text-base-content">
+
+  <main class="container mx-auto py-12 space-y-6">
+    <h1 class="text-4xl font-bold"><%= project.title %></h1>
+    <img src="<%= project.feature_img_url %>" alt="<%= project.title %>" class="rounded-lg w-full max-w-xl mx-auto"/>
+    <p class="prose mx-auto"><%= project.intro_short %></p>
+    <h2 class="text-2xl font-semibold">Impact</h2>
+    <p class="prose"><%= project.impact %></p>
+    <a href="<%= project.original_source_url %>" target="_blank" class="btn btn-primary">
+      Read More
+    </a>
+
+    <blockquote id="random-quote" class="italic"></blockquote>
+    <script>
+      fetch('https://dummyjson.com/quotes/random')
+        .then(r => r.json())
+        .then(q => {
+          document.getElementById('random-quote').innerText =
+            `"${q.quote}" — ${q.author}`;
+        });
+    </script>
+
+    <a href="/solutions/projects" class="btn btn-ghost">← Back to list</a>
+  </main>
+
+</body>
+</html>
